@@ -1,0 +1,14 @@
+name = "beach-display"
+main = "src/index.ts"
+compatibility_date = "2025-04-14"
+
+[assets]
+directory = "./public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "beach-reditelna-db"
+database_id = "29c4817c-7d60-41e5-908f-dd679977d5f2" # same database_id as the admin worker
+
+[observability]
+enabled = true

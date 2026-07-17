@@ -1,0 +1,197 @@
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("src/Inter-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("src/InterDisplay-SemiBold.woff2") format("woff2"); }
+
+*, :after, :before {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0
+}
+
+html {
+    font-family: Inter, -apple-system, HelveticaNeue, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(src/background.webp);
+    background-position: center;
+    background-size: cover;
+    min-height: 100svh;
+}
+
+.screen-centered {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.screen-message {
+    text-align: center;
+}
+
+.loader {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: solid 4px #ffffff;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-collapse: separate;
+    border-radius: 50%;
+    animation: spin .5s linear infinite;
+}
+
+.header,.section {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.last-updated {
+    background-color: rgba(0, 0, 0, .5);
+    font-size: .9rem;
+    padding: .5em;
+    text-align: center;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tournament-name {
+    font-size: 2rem;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+.stage-badge {
+    display: block;
+    text-align: center;
+    font-size: .9rem;
+    padding: .25em 1em;
+    border-radius: 32px;
+    background-color: #aaaaaa;
+    color: #1d1d1f;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    margin-top: 1.5em;
+    margin-bottom: .75em;
+}
+
+.court-card {
+    background-color: rgba(255,255,255,.5);
+    color: #1d1d1f;
+    border-radius: 12px;
+    transition: color 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+.court-card.active {
+    background-color: #ffffff;
+    color: #1d1d1f;
+}
+
+.court-card + .court-card {
+    margin-top: 12px;
+}
+
+.court-card-content {
+    padding: 16px;
+}
+
+.empty-court {
+    text-align: center;
+}
+
+.court-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.court-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.court-timer {
+    font-size: .9rem;
+}
+
+.court-card-content {
+    padding: 16px;
+}
+
+.court-card-body {
+    padding: 1rem 0;
+}
+
+.group-label {
+    font-size: .9rem;
+}
+
+.match-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.empty-court {
+    text-align: center;
+}
+
+.vs {
+    color: #606060;
+}
+
+.upcoming-list {
+    margin-top: 1rem;
+}
+
+.upcoming-row {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 1em;
+    border-bottom: solid 1px #86868b;
+}
+
+.upcoming-index {
+    font-weight: 600;
+}
+
+.upcoming-group {
+    font-size: 1rem;
+}
+
+.message-banner {
+    display: block;
+    background-color: #eff5ff;
+    color: #1d1d1f;
+    padding: 1rem;
+    margin-top: 1em;
+    border-radius: 12px;
+    border: solid 2px #4891ff;
+}
+
+.alert::before {
+    color: #0f60d9;
+    content: "!";
+    font-weight: 600;
+    font-size: 1.25em;
+    margin-right: .75em;
+}
