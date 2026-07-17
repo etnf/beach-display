@@ -13,7 +13,6 @@ html {
     -moz-font-smoothing: grayscale;
 }
 
-
 .screen-centered {
     position: fixed;
     top: 0;
@@ -36,7 +35,7 @@ html {
     display: block;
     width: 20px;
     height: 20px;
-    border: solid 4px #ffffff;
+    border: solid 4px #1d1d1d;
     border-left-color: rgba(0, 0, 0, 0);
     border-collapse: separate;
     border-radius: 50%;
